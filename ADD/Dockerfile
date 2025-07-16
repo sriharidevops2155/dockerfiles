@@ -4,5 +4,6 @@ RUN rm -rf /usr/share/nginx/html/index.html
 #Source dest should be in current directory only
 ADD https://raw.githubusercontent.com/sriharidevops2155/terraform/refs/heads/main/state/ec2.tf /usr/share/nginx/html/index.html
 RUN chmod +r /usr/share/nginx/html/index.html
+#Add untars the file directly.
 ADD sample-1.tar /tmp
 CMD ["nginx","-g","daemon off;"]
